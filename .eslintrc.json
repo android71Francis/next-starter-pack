@@ -1,0 +1,112 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "jest",
+    "react",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "brace-style": "error",
+    "curly": "error",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "max-lines": [
+      "error",
+      1000
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "no-dupe-keys": "error",
+    "no-extra-semi": "error",
+    "no-undef": "error",
+    "indent": [
+      "error",
+      4
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 180,
+        "tabWidth": 4,
+        "ignoreUrls": false
+      }
+    ],
+    "no-multi-spaces": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/jsx-equals-spacing": [
+      "error",
+      "never"
+    ],
+    "react/jsx-indent": [
+      "error", 4,
+      {
+        "checkAttributes": true,
+        "indentLogicalExpressions": true
+      }
+    ],
+    "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
+    "react/jsx-max-props-per-line": 1,
+    "react/no-unused-prop-types": "error",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "react/jsx-one-expression-per-line": [
+      "error",
+      {
+        "allow": "single-child"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error"
+  },
+  "overrides": [{
+    "files": [ "**/*.spec.js", "**/*.test.js" ],
+    "rules": {
+      "max-lines": "off"
+    }
+  }]
+}
